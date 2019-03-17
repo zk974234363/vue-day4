@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <script>
+    
+    // get 方式 查看全部
+    // axios
+    // .get('http://localhost:3000/list')
+    // //如果请求成功 会执行 then里面的回调
+    // .then(res=>{
+    //     console.log('读取成功',res.data);
+    //     //这里res.data 就是读取的数据
+    // });
+
+     //查看具体(params  ) 筛选的作用 看某一个具体的数据 这儿是看id为3的数据
+     //外层{配置项}
+     // 里层 params :{属性:属性值}
+    // axios.get('http://localhost:3000/list',{
+    //    params:{
+    //        id:3
+    //    }
+    // }).then(res=>{
+    //     console.log(res);
+        
+    // })
+
+
+
+
+
+
+
+    //post 添加
+    //1添加一个新元素
+    // axios.post('http://localhost:3000/list',{
+    //     name:'小莉莉',
+    //     age:19
+    // }).then(res=>{
+    //     console.log(res);
+        
+    // })
+
+    //删除 delete 
+    // axios.delete('http://localhost:3000/list/2').then(res=>{
+    //     console.log(res);
+        
+    // })
+
+    //put /patch 修改
+    //1 put 
+    // 需求:吧id为3的名字改成zkzk
+    //put 要把改和不改的都要传进去
+    // axios.put('http://localhost:3000/list/3',{
+    //     name:'zkzk',
+    //     age:27
+    // }).then(res=>{
+    //     console.log(res);
+        
+    // })
+
+//2 patch 
+//需求 吧id为3的age改成18
+axios.patch('http://localhost:3000/list/3',{
+    age:18
+}).then(res=>{
+    console.log(res);
+    
+})
+
+
+
+
+
+    </script>
+</body>
+</html>
